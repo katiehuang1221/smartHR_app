@@ -275,12 +275,12 @@ with dataset:
     st.header('Candidate Statistics')
    
 
-    df_train = pd.read_csv('data/df_train.csv')
-    df_test = pd.read_csv('data/df_test.csv')
+    df_train = pd.read_csv('data/df_train.csv',index_col=0)
+    df_test = pd.read_csv('data/df_test.csv',index_col=0)
 
-    X_train = pd.read_pickle('data/X_adasyn')
-    y_train = pd.read_pickle('data/y_adasyn')
-    X_test = pd.read_pickle('data/X_test_processed')
+    X_train = pd.read_csv('data/X_adasyn',index_col=0)
+    y_train = pd.read_csv('data/y_adasyn',index_col=0)
+    X_test = pd.read_csv('data/X_test_processed',index_col=0)
     y_test = df_test['target']
 
 
@@ -362,10 +362,10 @@ with model_training:
     st.header('Model')
 
     # Training data
-    df_test = pd.read_csv('data/df_test.csv')
-    X_train = pd.read_pickle('data/X_adasyn')
-    y_train = pd.read_pickle('data/y_adasyn')
-    X_test = pd.read_pickle('data/X_test_processed')
+    df_test = pd.read_csv('data/df_test.csv',index_col=0)
+    X_train = pd.read_csv('data/X_adasyn',index_col=0)
+    y_train = pd.read_csv('data/y_adasyn',index_col=0)
+    X_test = pd.read_csv('data/X_test_processed',index_col=0)
     y_test = df_test['target']
 
     lm = LogisticRegression(solver='newton-cg',  # For comparison, use the same solver as statsmodels default
