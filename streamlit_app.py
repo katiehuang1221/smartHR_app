@@ -270,6 +270,7 @@ if specify == 'Specify':
         # st.write(training_hours_filter_min)
 
 
+st.sidebar.markdown('###### Made by Katie Huang 2021')
 
 with dataset:
     st.header('Candidate Statistics')
