@@ -275,8 +275,8 @@ with dataset:
     st.header('Candidate Statistics')
    
 
-    df_train = pd.read_pickle('data/df_train.csv')
-    df_test = pd.read_pickle('data/df_test.csv')
+    df_train = pd.read_csv('data/df_train.csv')
+    df_test = pd.read_csv('data/df_test.csv')
 
     X_train = pd.read_pickle('data/X_adasyn')
     y_train = pd.read_pickle('data/y_adasyn')
@@ -362,7 +362,7 @@ with model_training:
     st.header('Model')
 
     # Training data
-    df_test = pd.read_pickle('data/df_test.csv')
+    df_test = pd.read_csv('data/df_test.csv')
     X_train = pd.read_pickle('data/X_adasyn')
     y_train = pd.read_pickle('data/y_adasyn')
     X_test = pd.read_pickle('data/X_test_processed')
